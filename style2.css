@@ -1,0 +1,385 @@
+/* ----------------------------------------------------- Gobals */
+/* On import notre URL pour les fonts, il existe d'autres méthodes... */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+/* Root n'est pas un élément, il permet d'englober les variables */
+:root {
+    /* Ce sont des variables que tu peux re-utiliser partout */
+    --main-color: #00a8ff;
+    --variant-main-color-1: #0097e6;
+    --variant-main-color-2: #487eb0;
+    --variant-main-color-3: #40739e;
+    --variant-main-color-4: #273c75;
+    --variant-main-color-5: #192a56;
+    --main-bg-color: #f5f6fa;
+    --black-color: #2f3640;
+    --white-color: #ffffff;
+    --border-radius: 10px;
+    --border: 5px solid var(--black-color);
+}
+
+body {
+    /* On utilise notre variables (var(--black-color)) */
+    color: var(--black-color);
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    /* Un autre facon d'utiliser les paddings */
+    /* Ca permet de prendre en compte le sens du texte, notemment pour le changement de langue */
+    /* padding-block-start = padding-top */
+    /* padding-inline-end = padding-right */
+    /* padding-block-end = padding-bottom */
+    /* padding-inline-start = padding-left */
+    /* padding-block= padding-top padding-bottom */
+    /* padding-inline = padding-left padding-right */
+
+    padding-inline: 1em;
+}
+
+section {
+    /* Tu peux aussi retrouver la notation avec les margins */
+    margin-block-end: 1em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+div.wrapper-section {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 6em;
+    padding-block: 1em .5em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+}
+
+h2 {
+    display: inline-block;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-size: 1.5em;
+    padding-inline: .5em 1em;
+    padding-block: .25em;
+    border-radius: var(--border-radius);
+}
+
+h2.vertical {
+    /* mettre le texte à la verticale */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+/* @media(max-width: 500px) permet de changer les attributs lorsque la taille d'écran atteint 500px */
+@media (max-width: 500px) {
+    h2.vertical {
+        writing-mode: initial;
+        text-orientation: initial;
+    }
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+hr {
+    width: 100%;
+    color: var(--white-color);
+    opacity: .5;
+    margin-block: .5em;
+}
+
+picture {
+    display: block;
+}
+
+picture img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ----------------------------------------------------- Section Présentation */
+section.presentation div.wrapper-section {
+    background-color: var(--main-bg-color);
+}
+
+section.presentation div.texte {
+    padding: 2em 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+section.presentation div.texte p.title {
+    font-size: 1.5em;
+}
+
+section.presentation div.texte div.attributes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em 2em;
+}
+
+/* ----------------------------------------------------- Section Experience */
+section.experiences div.wrapper-section {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+@media (max-width: 500px) {
+    section.experiences div.wrapper-section {
+        flex-direction: column;
+    }
+}
+
+section.experiences div.content {
+    display: flex;
+    align-items: start;
+    gap: 1em;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding-inline: 1em;
+    padding-block: 1.5em;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    section.experiences div.content {
+        flex-direction: column;
+    }
+}
+
+section.experiences div.content picture {
+    width: 75px;
+}
+
+@media (max-width: 500px) {
+    section.experiences div.content picture {
+        align-self: center;
+    }
+}
+
+section.experiences div.content picture img {
+    object-fit: contain;
+}
+
+section.experiences div.content .texte {
+    display: flex;
+    flex-direction: column;
+}
+
+section.experiences div.content ul {
+    list-style: circle;
+    padding-block-start: .5em;
+    padding-inline-start: 1.5em;
+}
+
+section.experiences div.content .other-infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    align-self: stretch;
+}
+
+@media (max-width: 500px) {
+    section.experiences div.content .other-infos {
+        align-items: start;
+    }
+}
+
+/* ----------------------------------------------------- Section Formation */
+section.formation div.wrapper-section {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+@media (max-width: 500px) {
+    section.formation div.wrapper-section {
+        flex-direction: column;
+    }
+}
+
+section.formation ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2em;
+}
+
+section.formation li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    flex-grow: 1;
+}
+
+section.formation li p {
+    text-align: center;
+}
+
+section.formation li p.date {
+    padding-inline: 1em;
+    padding-block: .5em;
+}
+
+section.formation li div.content-infos {
+    background-color: var(--black-color);
+    padding-inline: 1em;
+    padding-block: .5em;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+section.formation li div.content-infos p {
+    color: var(--white-color);
+}
+
+section.formation li div.content-infos p:not(:last-of-type) {
+    margin-block-end: .5em;
+}
+
+section.formation li div.content-infos p.place {
+    opacity: .5;
+}
+
+/* ----------------------------------------------------- Section Skills */
+section.skills div.wrapper-section {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+section.skills div.wrapper-skill {
+    background-color: var(--main-bg-color);
+    display: inline-block;
+    border-radius: var(--border-radius);
+}
+
+@media (max-width: 500px) {
+    section.skills div.wrapper-skill {
+        flex-grow: 1;
+    }
+}
+
+section.skills div.wrapper-skill ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-inline: 2em;
+    padding-block: 1em;
+}
+
+/* ------------------ Skill logiciel */
+section.skills div.wrapper-skill.logiciels ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.skills div.wrapper-skill ul li picture {
+    width: 75px;
+}
+
+section.skills div.wrapper-skill ul li picture img {
+    object-fit: contain;
+}
+
+/* nth-of-type(n) permet de cibler le n du meme élément  */
+section.skills div.wrapper-skill ul li:nth-of-type(1) p.title {
+    /* Cette technique à été trouvée sur internet, elle permet de faire un dégradé sur un texte */
+    background: linear-gradient(90deg, rgba(157, 75, 242, 1) 0%, rgba(251, 49, 142, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section.skills div.wrapper-skill ul li:nth-of-type(2) p.title {
+    color: #0179CB;
+}
+
+section.skills div.wrapper-skill ul li:nth-of-type(3) p.title {
+    color: #DBC024;
+}
+
+/* ------------------ Skill langues */
+section.skills div.wrapper-skill.langues ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+section.skills div.wrapper-skill.langues ul li .bar {
+    width: 100px;
+    height: 10px;
+    background-color: var(--black-color);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+section.skills div.wrapper-skill.langues ul li .bar .content-bar {
+    background-color: var(--main-color);
+    height: 100%;
+}
+
+section.skills div.wrapper-skill.langues ul li:nth-of-type(1) .bar .content-bar {
+    width: 100%;
+}
+
+section.skills div.wrapper-skill.langues ul li:nth-of-type(2) .bar .content-bar {
+    width: 80%;
+}
+
+section.skills div.wrapper-skill.langues ul li:nth-of-type(3) .bar .content-bar {
+    width: 60%;
+}
+
+section.skills div.wrapper-skill.langues ul li:nth-of-type(4) .bar .content-bar {
+    width: 40%;
+}
+
+/* ------------------ Skill interets */
+section.skills div.wrapper-skill.interets ul li {
+    display: inline-block;
+    padding-inline: .5em 1em;
+    padding-block: .5em;
+    border-radius: 4px;
+    color: var(--white-color);
+}
+
+section.skills div.wrapper-skill.interets ul li:nth-of-type(1) {
+    background-color: var(--black-color);
+}
+
+section.skills div.wrapper-skill.interets ul li:nth-of-type(2) {
+    background-color: var(--main-color);
+}
+
+section.skills div.wrapper-skill.interets ul li:nth-of-type(3) {
+    background-color: var(--variant-main-color-1);
+}
+
+section.skills div.wrapper-skill.interets ul li:nth-of-type(4) {
+    background-color: var(--variant-main-color-2);
+}
+
+section.skills div.wrapper-skill.interets ul li:nth-of-type(5) {
+    background-color: var(--variant-main-color-4);
+}

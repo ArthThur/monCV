@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
 </head>
+
+<header>
+    <p class="nom">Arthur LAGRANGE</p>
+    <input type="button" name="Thème" id="thm" value="Thème">
+</header>
+
 <body>
     <main>
         <section class="presentation">
@@ -15,13 +26,17 @@
                 <h2>Présentation</h2>
                 <div class="texte">
                     <p class="nom">Arthur LAGRANGE</p>
-                    <p class="presentation">Élève en classe de 3ème, je suis très intéressé par le développement web. J'ai appris quelquels languages simple tel que le Html et le Css et je commence l'apprentissage du Php. <br>J'aimerais en apprendre plus sur le métier de développeur pendant le stage d'observation proposé par mon collège.</p>
+                    <p class="presentation">Élève en classe de 3ème, je suis très intéressé par le développement web.
+                        J'ai appris quelquels languages simple tel que le Html et le Css et je commence l'apprentissage
+                        du Php. <br>J'aimerais en apprendre plus sur le métier de développeur pendant le stage
+                        d'observation proposé par mon collège.</p>
                     <div class="infos">
                         <p><strong>Age</strong><br>14 ans</p>
                         <p><strong>Portable</strong><br>07 88 67 81 82</p>
                         <p><strong>E-mail</strong><br>arthur.lagrange18@gmail.com</p>
                     </div>
-                    <p><strong>Adresses</strong><br>5 Chemin du moulin de Rambal 3360 Latresne | 20 avenue de Claret 33360 Carignan de BDX</p>
+                    <p><strong>Adresses</strong><br>5 Chemin du moulin de Rambal 3360 Latresne | 20 avenue de Claret
+                        33360 Carignan de BDX</p>
                 </div>
             </div>
         </section>
@@ -29,15 +44,140 @@
             <div class="wrapper-section">
                 <h2 class="verticaltext">Expérience</h2>
                 <div class="exp">
-                    <p><strong>Club ados</strong> <br>Mini formation Html/css
-                            <ul>
-                                <li>Apprentissage des bases du Html</li>
-                                <li>Apprentissage du l'utilisation des logiciels de programmation</li>
-                            </ul>
-                    </p>
+                    <picture>
+                        <img src="https://logodix.com/logo/470388.png">
+                    </picture>
+                    <div class="texte2">
+                        <p class="exp1"><strong>Club ados</strong> <br>Mini formation Html/css</p>
+                        <ul class="liste">
+                            <li>Apprentissage des bases du Html</li>
+                            <li>Apprentissage du l'utilisation des logiciels de programmation</li>
+                        </ul>
+
+                    </div>
+                    <div class="autre">
+                        <p><strong>Latresne | 3 jours</strong></p>
+                        <p>2022</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="formations">
+            <div class="wrapper-section">
+                <h2 class="verticaltext2">Formation</h2>
+                <ul class="formas">
+                    <li>
+                        <p class="date">2014 - 2018</p>
+                        <div class="forma-list">
+                            <p class="title">CP - CM2</p>
+                            <p class="type">École élémentaire</p>
+                            <hr>
+                            <p class="place">Latresne, France</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="date">2019 - Aujourd'hui</p>
+                        <div class="forma-list">
+                            <p class="title">6ème - 3ème bilangue</p>
+                            <p class="type">Collège Camille Claudel</p>
+                            <hr>
+                            <p class="place">Latresne, France</p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="date">2021 - Aujourd'hui</p>
+                        <div class="forma-list">
+                            <p class="title">Classe latiniste</p>
+                            <p class="type">Collège Camille Claudel</p>
+                            <hr>
+                            <p class="place">Latresne, France</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="sk">
+            <div class="wrapper-section">
+                <div class="wrapper-sk logiciels">
+                <h2>Logiciels</h2>
+                    <div class="logi"></div>
+                <ul>
+                    <li>
+                        <a target="_blank" title="PhpStorm site" href="https://www.jetbrains.com/phpstorm/promo/?source=google&medium=cpc&campaign=14335686435&term=phpstorm&content=604081944637&gclid=Cj0KCQiAtICdBhCLARIsALUBFcGnBd9xjzxICPlnCke8pOtyb9Sz8IbhX_lEHo7YEHbYp70FuVlVzJIaAqq2EALw_wcB">
+                            <picture>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/PhpStorm_Icon.svg/2048px-PhpStorm_Icon.svg.png">
+                            </picture>
+                            <p class="name">Php Storm</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" title="Visual Studio Code site" href="https://code.visualstudio.com/">
+                            <picture>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png">
+                            </picture>
+                            <p class="name">Vs Code</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" title="Geany site" href="https://www.geany.org/">
+                            <picture>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Geany_logo.svg/1200px-Geany_logo.svg.png">
+                            </picture>
+                            <p class="name">Geany</p>
+                        </a>
+                    </li>
+                </ul>
+                </div>
+                <div class="wrapper-sk lang">
+                    <h2>Langues</h2>
+                    <ul>
+                        <li>
+                            <p class="lang">Français</p>
+                            <div class="bar">
+                                <div class="content-bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="lang">Anglais</p>
+                            <div class="bar">
+                                <div class="content-bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="lang">Espagnol</p>
+                            <div class="bar">
+                                <div class="content-bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <p class="lang">Latin</p>
+                            <div class="bar">
+                                <div class="content-bar"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrapper-sk competences">
+                    <h2>Compétences</h2>
+                    <ul>
+                        <li><strong>Curiosité</strong></li>
+                        <li><strong>Motivation</strong></li>
+                        <li><strong>Communication</strong></li>
+                        <li><strong>Travail d'équipe</strong></li>
+                    </ul>
+                </div>
+                <div class="wrapper-sk interets">
+                    <h2>Intérêts</h2>
+                    <ul>
+                        <li>Wakeboard (3 ans)</li>
+                        <li>Snowboard (1 an)</li>
+                        <li>Escalade (1 mois)</li>
+                        <li>Développement web</li>
+                        <li>Dessin (2 ans)</li>
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
 </body>
+
 </html>

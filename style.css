@@ -1,18 +1,57 @@
-body{
-    font-size: 18px;
+:root{
+    --main-color: #0097e6;
+    --white-color: #dfe6e9;
+    --background-color: #2d3436;
 }
-.wrapper-section{
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-inline: 1em;
+    padding-block: 1em;
+}
+
+header input{
+    display: flex;
+    margin-right: 20px;
+}
+
+
+
+body {
+    font-size: 18px;
+    font-family: "Nunito", serif;
+}
+
+body.active{
+    background-color: var(--background-color);
+}
+
+body.active div.exp{
+    background-color: var(--white-color);
+}
+
+body.active section.formations li{
+    border: var(--main-color);
+}
+
+.wrapper-section {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     border-radius: 10px;
 }
-section.presentation .wrapper-section{
-    background-color: #dfe6e9;
-}
 
-h2{
-    background-color: #2d3436;
+section.presentation .wrapper-section {
+    background-color: var(--white-color);
+}
+body.active h2{
+    background-color: #40739e;
+}
+h2 {
+    background-color: var(--background-color);
     border-radius: 5px;
     font-size: 1.5em;
     padding: .5em 1em;
@@ -20,41 +59,255 @@ h2{
     color: white;
 }
 
-.texte{
+.texte {
     padding: 25px 40px;
 }
 
-p.nom{
+p.nom {
     font-size: 40px;
     font-weight: bold;
 }
-.infos{
+
+.infos {
     display: flex;
     gap: 1em;
     margin: 1em 0;
 }
 
-p.presentation{
+p.presentation {
     gap: 1em;
     margin: 1em 0;
 }
 
-strong{
+strong {
     font-weight: bold;
 }
 
-div.exp{
-    border: 2px solid #2d3436;
+div.exp {
+    border: 2px solid var(--background-color);
     border-radius: 10px;
     width: 100%;
+    padding: 70px;
+    display: flex;
 }
-h2.verticaltext{
+
+h2.verticaltext {
     writing-mode: vertical-rl;
     text-orientation: mixed;
 }
 
-section.experiences .wrapper-section{
+section.experiences .wrapper-section {
     display: flex;
     gap: 25px;
     padding: 20px;
+}
+
+picture {
+    width: 50px;
+    display: block;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+p.exp1 {
+    margin: 0.5em 0;
+    padding-left: 15px;
+}
+
+div.autre{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.liste {
+    padding-left: 35px;
+    list-style: inside;
+}
+
+section.formations div.wrapper-section{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+
+h2.verticaltext2 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+section.formations ul{
+    display: table;
+    margin: 0 -10px 0 10px;
+    border-spacing: 10px;
+    width: 100%;
+}
+
+section.formations li{
+    display: table-cell;
+    padding: 0;
+    border: 5px solid var(--background-color);
+    border-radius: 10px;
+    align-items: center;
+}
+
+p.date{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    gap: 15px;
+}
+
+hr{
+    width: 100%;
+    color: var(--white-color);
+    opacity: .5;
+    margin-block: .5em;
+}
+
+section.sk div.wrapper-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-top: 20px;
+}
+section.sk div.wrapper-section div.logiciels ul li a{
+    text-decoration: none;
+
+}
+
+div.wrapper-sk.logiciels div.logi{
+    transform: scale(1.1);
+}
+
+div.wrapper-sk.competences ul{
+    padding: 1em;
+}
+
+div.wrapper-sk.logiciels ul{
+    padding: 1em;
+}
+
+div.wrapper-sk.logiciels ul li:hover img{
+    transform: scale(1.1);
+}
+
+div.wrapper-sk.logiciels ul li img{
+    transition: all ease-in 300ms 100ms;
+}
+
+div.forma-list{
+    background-color: var(--background-color);
+    padding-inline: 1em;
+    padding-block: .5em;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+section.sk div.wrapper-sk{
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    background: var(--white-color);
+    border-radius: 10px;
+}
+section.sk div.wrapper-sk.lang ul{
+    padding: 1em;
+}
+section.sk div.wrapper-sk.lang ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+section.sk div.wrapper-sk.lang ul li .bar{
+    width: 100px;
+    height: 10px;
+    background-color: var(--background-color);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+section.sk div.wrapper-sk.lang ul li .bar .content-bar{
+    background-color: var(--main-color);
+    height: 100%;
+    animation: chargement 3s  ease-in-out alternate-reverse infinite;
+}
+@keyframes chargement {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+section.sk div.wrapper-sk.lang ul li:nth-of-type(1) .bar .content-bar{
+    max-width: 100%;
+}
+section.sk div.wrapper-sk.lang ul li:nth-of-type(2) .bar .content-bar{
+    max-width: 70%;
+}
+section.sk div.wrapper-sk.lang ul li:nth-of-type(3) .bar .content-bar{
+    max-width: 60%;
+}
+section.sk div.wrapper-sk.lang ul li:nth-of-type(4) .bar .content-bar{
+    max-width: 40%;
+}
+
+section.sk div.wrapper-sk.interets ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-inline: 1em;
+    margin-block-start: 1em;
+}
+section.sk div.wrapper-sk.interets ul li{
+    display: inline-block;
+    padding-inline: .5em 1em;
+    padding-block: .5em;
+    border-radius: 4px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: all ease-in 300ms 100ms;
+}
+
+section.sk div.wrapper-sk.interets ul li:hover{
+    transform: rotateZ(5deg);
+}
+
+section.sk div.wrapper-sk.interets ul li:nth-of-type(1){
+    background-color: var(--background-color);
+}
+
+section.sk div.wrapper-sk.interets ul li:nth-of-type(2){
+    background-color: #00a8ff;
+}
+
+section.sk div.wrapper-sk.interets ul li:nth-of-type(3){
+    background-color: var(--main-color);
+}
+
+section.sk div.wrapper-sk.interets ul li:nth-of-type(4){
+    background-color: #487eb0;
+}
+
+section.sk div.wrapper-sk.interets ul li:nth-of-type(5){
+    background-color: #40739e;
 }
